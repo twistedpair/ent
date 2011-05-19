@@ -13,6 +13,7 @@
         "encode",
         "decode"
     ],
+    "license" : "perl",
     "scripts": {
         "test": "expresso"
     },
