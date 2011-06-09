@@ -39,10 +39,10 @@ exports.decode = function (str) {
     }
     
     return str
-        .replace(/&#(\d+);?/, function (_, code) {
+        .replace(/&#(\d+);?/g, function (_, code) {
             return String.fromCharCode(code);
         })
-        .replace(/&#[xX]([A-Fa-f0-9]+);?/, function (_, hex) {
+        .replace(/&#[xX]([A-Fa-f0-9]+);?/g, function (_, hex) {
             return String.fromCharCode(parseInt(hex, 16));
         })
         .replace(/&([^;\W]+;?)/g, function (m, e) {
