@@ -21,3 +21,12 @@ exports.num = function () {
     assert.eql(ent.encode(a), b);
     assert.eql(ent.decode(b), a);
 };
+
+exports.hex = function () {
+    for (var i = 0; i < 256; i++) {
+        var a = String.fromCharCode(i.toString(16));
+        var b = '&#x' + i.toString(16) + ';';
+        assert.eql(ent.encode(a), b);
+        assert.eql(ent.decode(b), a);
+    }
+};
