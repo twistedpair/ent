@@ -35,11 +35,14 @@ exports.hex = function () {
         }
     }
     
-    for (var i = 127; i < 256; i++) {
+    for (var i = 127; i < 2000; i++) {
         var a = String.fromCharCode(i);
         var b = '&#x' + i.toString(16) + ';';
+        var c = '&#X' + i.toString(16) + ';';
         
         assert.equal(ent.decode(b), a);
+        assert.equal(ent.decode(c), a);
+        
         var encoded = ent.encode(a);
         if (!encoded.match(/^&\w+;/)) {
             assert.equal(encoded, '&#' + i + ';');
