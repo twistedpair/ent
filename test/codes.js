@@ -20,6 +20,9 @@ exports.num = function () {
     var b = '&#1337;';
     assert.eql(ent.encode(a), b);
     assert.eql(ent.decode(b), a);
+    
+    assert.eql(ent.encode(a + a), b + b);
+    assert.eql(ent.decode(b + b), a + a);
 };
 
 exports.hex = function () {
@@ -44,8 +47,10 @@ exports.hex = function () {
         assert.equal(ent.decode(c), a);
         
         var encoded = ent.encode(a);
+        var encoded2 = ent.encode(a + a);
         if (!encoded.match(/^&\w+;/)) {
             assert.equal(encoded, '&#' + i + ';');
+            assert.equal(encoded2, '&#' + i + ';&#' + i + ';');
         }
     }
 };
