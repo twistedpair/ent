@@ -21,7 +21,10 @@ exports.encode = function (str) {
         if (e) {
             return '&' + (e.match(/;$/) ? e : e + ';');
         }
-        else if (cc > 127) {
+        else if (c.match(/\s/)) {
+            return c;
+        }
+        else if (cc < 32 || cc >= 127) {
             return '&#' + cc + ';';
         }
         else {
@@ -38,6 +41,9 @@ exports.decode = function (str) {
     return str
         .replace(/&#(\d+);?/, function (_, code) {
             return String.fromCharCode(code);
+        })
+        .replace(/&#[xX]([A-Fa-f0-9]+);?/, function (_, hex) {
+            return String.fromCharCode(parseInt(hex, 16));
         })
         .replace(/&([^;\W]+;?)/g, function (m, e) {
             var ee = e.replace(/;$/, '');
