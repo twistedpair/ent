@@ -15,6 +15,8 @@ output:
     &lt;span&gt;&copy;moo&lt;/span&gt;
     π & ρ
 
+![ent](http://substack.net/images/ent.png)
+
 methods
 =======
 
