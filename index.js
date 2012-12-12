@@ -1,7 +1,5 @@
 var fs = require('fs');
-var entities = JSON.parse(
-    fs.readFileSync(__dirname + '/entities.json', 'utf8')
-);
+var entities = require('./entities.json');
 
 var revEntities = {};
 Object.keys(entities).forEach(function (key) {
