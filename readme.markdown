@@ -46,4 +46,4 @@ npm install ent
 
 # license
 
-MIT
+perl
