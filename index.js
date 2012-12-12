@@ -1,4 +1,3 @@
-var fs = require('fs');
 var entities = require('./entities.json');
 
 var revEntities = {};
