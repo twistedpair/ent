@@ -1,5 +1,5 @@
 var test = require('tape');
-var ent = require('ent');
+var ent = require('../');
 
 test('amp', function (t) {
     var a = 'a & b & c';
