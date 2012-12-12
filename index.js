@@ -1,11 +1,11 @@
 var entities = require('./entities.json');
 
 var revEntities = {};
-Object.keys(entities).forEach(function (key) {
+for (var key in entities) {
     var e = entities[key];
     var s = typeof e === 'number' ? String.fromCharCode(e) : e;
     revEntities[s] = key;
-});
+}
 
 exports.encode = function (str) {
     if (typeof str !== 'string') {
