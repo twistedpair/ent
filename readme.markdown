@@ -2,6 +2,8 @@
 
 Encode and decode HTML entities
 
+[![browser support](http://ci.testling.com/substack/node-ent.png)](http://ci.testling.com/substack/node-ent)
+
 [![build status](https://secure.travis-ci.org/substack/node-ent.png)](http://travis-ci.org/substack/node-ent)
 
 # example
