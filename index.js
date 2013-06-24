@@ -1,11 +1,5 @@
 var entities = require('./entities.json');
-
-var revEntities = {};
-for (var key in entities) {
-    var e = entities[key];
-    var s = typeof e === 'number' ? String.fromCharCode(e) : e;
-    revEntities[s] = key;
-}
+var revEntities = require('./reversed.json');
 
 exports.encode = function (str) {
     if (typeof str !== 'string') {
@@ -13,8 +7,8 @@ exports.encode = function (str) {
     }
     
     return str.split('').map(function (c) {
-        var e = revEntities[c];
         var cc = c.charCodeAt(0);
+        var e = revEntities[cc];
         if (e) {
             return '&' + (e.match(/;$/) ? e : e + ';');
         }
