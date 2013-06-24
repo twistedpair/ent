@@ -7,7 +7,7 @@ var reversed = {};
 data.forEach(function (entity) {
     entity.reference = entity.reference.substring(1); //remove the '&'
     entities[entity.reference] = entity.glyph;
-    if (entity.glyph.length === 1) {
+    if (entity.glyph.length === 1 && /\;$/.test(entity.reference)) {
         reversed[entity.glyph.charCodeAt(0)] = entity.reference;
     }
 });
