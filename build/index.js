@@ -12,7 +12,7 @@ data.forEach(function (entity) {
     }
 });
 
-function UTF8Escape(str){
+function escape(str){
     var i = str.length;
     var aRet = [];
 
@@ -29,5 +29,5 @@ function UTF8Escape(str){
     return aRet.join('');
 }
 
-fs.writeFileSync(__dirname + '/../entities.json', UTF8Escape(JSON.stringify(entities, null, 4)));
-fs.writeFileSync(__dirname + '/../reversed.json', UTF8Escape(JSON.stringify(reversed, null, 4)));
+fs.writeFileSync(__dirname + '/../entities.json', escape(JSON.stringify(entities, null, 4)));
+fs.writeFileSync(__dirname + '/../reversed.json', escape(JSON.stringify(reversed, null, 4)));
