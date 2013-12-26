@@ -20,13 +20,13 @@
     },
     "testling" : {
         "files" : "test/*.js",
-        "browsers" : {
-            "ie" : [ 6, 7, 8, 9 ],
-            "ff" : [ 3.5, 10, 15.0 ],
-            "chrome" : [ 10, 22 ],
-            "safari" : [ 5.1 ],
-            "opera" : [ 12 ]
-        }
+        "browsers" : [
+          "ie/6..latest",
+          "ff/3.5", "ff/latest",
+          "chrome/10", "chrome/latest",
+          "safari/latest",
+          "opera/latest"
+        ]
     },
     "devDependencies" : {
         "tape" : "~2.3.2"
