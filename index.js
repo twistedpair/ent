@@ -2,7 +2,7 @@ var punycode = require('punycode');
 var entities = require('./entities.json');
 var revEntities = require('./reversed.json');
 
-exports.encode = function (str) {
+exports.encode = function (str, opts) {
     if (typeof str !== 'string') {
         throw new TypeError('Expected a String');
     }
@@ -11,6 +11,7 @@ exports.encode = function (str) {
         '<': true, '>': true,
         '&': true
     };
+    if (!opts) opts = {};
     
     return str.split('').map(function (c) {
         var cc = c.charCodeAt(0);
