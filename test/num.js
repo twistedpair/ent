@@ -7,7 +7,7 @@ test('opts.numeric', function (t) {
     var b = '<html> © π " \'';
     var bx = '&#60;html&#62; &#169; &#960; &#34; &#39;';
     
-    t.equal(ent.encode(a, { numeric: true }), ax);
-    t.equal(ent.encode(b, { numeric: true }), bx);
+    t.equal(ent.encode(a), ax);
+    t.equal(ent.encode(b), bx);
     t.end();
 });

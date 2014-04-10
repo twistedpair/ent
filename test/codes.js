@@ -4,7 +4,7 @@ var ent = require('../');
 
 test('amp', function (t) {
     var a = 'a & b & c';
-    var b = 'a &amp; b &amp; c';
+    var b = 'a &#38; b &#38; c';
     t.equal(ent.encode(a), b);
     t.equal(ent.decode(b), a);
     t.end();
@@ -12,16 +12,32 @@ test('amp', function (t) {
 
 test('html', function (t) {
     var a = '<html> © π " \'';
-    var b = '&lt;html&gt; &copy; &pi; &quot; &apos;';
+    var b = '&#60;html&#62; &#169; &#960; &#34; &#39;';
     t.equal(ent.encode(a), b);
+    t.equal(ent.decode(b), a);
+    t.end();
+});
+
+test('html named', function (t) {
+    var a = '<html> © π " \'';
+    var b = '&lt;html&gt; &copy; &pi; &quot; &apos;';
+    t.equal(ent.encode(a, { named: true }), b);
     t.equal(ent.decode(b), a);
     t.end();
 });
 
 test('entities', function (t) {
     var a = '\u2124';
-    var b = '&Zopf;';
+    var b = '&#8484;';
     t.equal(ent.encode(a), b);
+    t.equal(ent.decode(b), a);
+    t.end();
+});
+
+test('entities named', function (t) {
+    var a = '\u2124';
+    var b = '&Zopf;';
+    t.equal(ent.encode(a, { named: true }), b);
     t.equal(ent.decode(b), a);
     t.end();
 });
