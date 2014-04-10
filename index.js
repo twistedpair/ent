@@ -16,13 +16,13 @@ exports.encode = function (str, opts) {
     return str.split('').map(function (c) {
         var cc = c.charCodeAt(0);
         var e = revEntities[cc];
-        if (e && (cc >= 127 || special[c])) {
+        if (e && (cc >= 127 || special[c]) && !opts.numeric) {
             return '&' + (e.match(/;$/) ? e : e + ';');
         }
         else if (/\s/.test(c)) {
             return c;
         }
-        else if (cc < 32 || cc >= 127) {
+        else if (cc < 32 || cc >= 127 || special[c]) {
             return '&#' + cc + ';';
         }
         else {
