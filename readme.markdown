@@ -15,7 +15,7 @@ console.log(ent.decode('&pi; &amp; &rho;'));
 ```
 
 ```
-&lt;span&gt;&copy;moo&lt;/span&gt;
+&#60;span&#62;&#169;moo&#60;/span&#62;
 π & ρ
 ```
 
@@ -27,8 +27,10 @@ console.log(ent.decode('&pi; &amp; &rho;'));
 
 Escape unsafe characters in `str` with html entities.
 
-If `opts.numeric` is true, don't use named codes, only `&#NNN;`-style numeric
-values.
+By default, entities are encoded with numeric decimal codes.
+
+If `opts.numeric` is false or `opts.named` is true, encoding will used named
+codes like `&pi;`.
 
 ## decode(str)
 
