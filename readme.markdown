@@ -23,9 +23,12 @@ console.log(ent.decode('&pi; &amp; &rho;'));
 
 # methods
 
-## encode(str)
+## encode(str, opts={})
 
 Escape unsafe characters in `str` with html entities.
+
+If `opts.numeric` is true, don't use named codes, only `&#NNN;`-style numeric
+values.
 
 ## decode(str)
 
