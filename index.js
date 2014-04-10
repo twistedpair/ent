@@ -6,14 +6,19 @@ exports.encode = function (str) {
     if (typeof str !== 'string') {
         throw new TypeError('Expected a String');
     }
+    var special = {
+        '"': true, "'": true,
+        '<': true, '>': true,
+        '&': true
+    };
     
     return str.split('').map(function (c) {
         var cc = c.charCodeAt(0);
         var e = revEntities[cc];
-        if (e) {
+        if (e && (cc >= 127 || special[c])) {
             return '&' + (e.match(/;$/) ? e : e + ';');
         }
-        else if (c.match(/\s/)) {
+        else if (/\s/.test(c)) {
             return c;
         }
         else if (cc < 32 || cc >= 127) {
