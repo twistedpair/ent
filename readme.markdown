@@ -23,6 +23,12 @@ console.log(ent.decode('&pi; &amp; &rho;'));
 
 # methods
 
+``` js
+var ent = require('ent');
+var encode = require('ent/encode');
+var decode = require('ent/decode');
+```
+
 ## encode(str, opts={})
 
 Escape unsafe characters in `str` with html entities.
