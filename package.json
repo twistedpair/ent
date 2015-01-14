@@ -1,7 +1,7 @@
 {
     "name" : "ent",
     "description" : "Encode and decode HTML entities",
-    "version" : "2.1.0",
+    "version" : "2.1.1",
     "repository" : "https://github.com/substack/node-ent.git",
     "author" : "James Halliday <mail@substack.net> (http://substack.net)",
     "main" : "./index.js",
