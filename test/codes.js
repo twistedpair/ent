@@ -19,10 +19,20 @@ test('html', function (t) {
 });
 
 test('html named', function (t) {
-    var a = '<html> © π " \'';
-    var b = '&lt;html&gt; &copy; &pi; &quot; &apos;';
+    var a = '<html> © π " \' ∴ Β β';
+    var b = '&lt;html&gt; &copy; &pi; &quot; &apos; &therefore; &Beta; &beta;';
     t.equal(ent.encode(a, { named: true }), b);
     t.equal(ent.decode(b), a);
+    t.end();
+});
+
+test('ambiguous ampersands', function (t) {
+    var a = '• &bullet';
+    var b = '&bullet; &bullet';
+    var c = '&bullet; &amp;bullet';
+    t.equal(ent.encode(a, { named: true }), c);
+    t.equal(ent.decode(b), a);
+    t.equal(ent.decode(c), a);
     t.end();
 });
 
