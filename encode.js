@@ -7,16 +7,17 @@ function encode (str, opts) {
     if (typeof str !== 'string') {
         throw new TypeError('Expected a String');
     }
-    var special = {
-        '"': true, "'": true,
-        '<': true, '>': true,
-        '&': true
-    };
     if (!opts) opts = {};
 
     var numeric = true;
     if (opts.named) numeric = false;
     if (opts.numeric !== undefined) numeric = opts.numeric;
+
+    var special = opts.special || {
+        '"': true, "'": true,
+        '<': true, '>': true,
+        '&': true
+    };
 
     var codePoints = punycode.ucs2.decode(str);
     var chars = [];

@@ -84,3 +84,18 @@ test('nested escapes', function (t) {
     t.equal(ent.decode(b + b), a + a);
     t.end();
 });
+
+test('encode `special` option', function (t) {
+    var a = '<>\'"&';
+    var b = '&lt;&gt;\'"&amp;';
+    t.equal(ent.encode(a, {
+      named: true,
+      special: {
+        '<': true,
+        '>': true,
+        '&': true
+      }
+    }), b);
+
+    t.end();
+});
