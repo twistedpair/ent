@@ -55,8 +55,10 @@ Convert html entities in `str` back to raw text.
 
 # credits
 
-HTML entity tables shamelessly lifted from perl's
-[HTML::Entities](http://cpansearch.perl.org/src/GAAS/HTML-Parser-3.68/lib/HTML/Entities.pm)
+HTML entity tables are from the official
+[`entities.json`](https://html.spec.whatwg.org/entities.json) file for
+the [whatwg HTML
+specification](https://html.spec.whatwg.org/multipage/syntax.html#named-character-references).
 
 # install
 
