@@ -1,6 +1,6 @@
 'use strict';
 
-var punycode = require('punycode');
+var punycode = require('punycode/');
 var entities = require('./entities.json');
 
 var revEntities = {};

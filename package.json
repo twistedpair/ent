@@ -27,8 +27,8 @@
         "version": "auto-changelog && git add CHANGELOG.md",
         "postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\""
     },
-    "testling": {
-        "files": "test/*.js"
+    "dependencies": {
+        "punycode": "^1.4.1"
     },
     "devDependencies": {
         "@ljharb/eslint-config": "^21.1.1",
@@ -57,5 +57,8 @@
             ".github/workflows",
             "build"
         ]
+    },
+    "testling": {
+        "files": "test/*.js"
     }
 }
