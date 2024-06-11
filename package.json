@@ -2,7 +2,7 @@
     "name" : "ent",
     "description" : "Encode and decode HTML entities",
     "version" : "0.0.7",
-    "repository" : "https://github.com/substack/node-ent.git",
+    "repository" : "https://github.com/ljharb/ent.git",
     "author" : "James Halliday <mail@substack.net> (http://substack.net)",
     "main" : "./index.js",
     "keywords" : [
@@ -18,14 +18,7 @@
         "test" : "tap test/*.js"
     },
     "testling" : {
-        "files" : "test/*.js",
-        "browsers" : {
-            "ie" : [ 6, 7, 8, 9 ],
-            "ff" : [ 3.5, 10, 15.0 ],
-            "chrome" : [ 10, 22 ],
-            "safari" : [ 5.1 ],
-            "opera" : [ 12 ]
-        }
+        "files" : "test/*.js"
     },
     "devDependencies" : {
         "tap" : "~0.4.3",

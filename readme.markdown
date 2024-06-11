@@ -2,9 +2,7 @@
 
 Encode and decode HTML entities
 
-[![browser support](http://ci.testling.com/substack/node-ent.png)](http://ci.testling.com/substack/node-ent)
-
-[![build status](https://secure.travis-ci.org/substack/node-ent.png)](http://travis-ci.org/substack/node-ent)
+[![build status](https://secure.travis-ci.org/ljharb/ent.png)](http://travis-ci.org/ljharb/ent)
 
 # example
 
@@ -19,7 +17,7 @@ console.log(ent.decode('&pi; &amp; &rho;'));
 π & ρ
 ```
 
-![ent](http://substack.net/images/ent.png)
+![ent](https://web.archive.org/web/20170823120015if_/http://substack.net/images/ent.png)
 
 # methods
 
