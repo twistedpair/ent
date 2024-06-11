@@ -25,8 +25,8 @@
         "prepublishOnly": "safe-publish-latest && npm run build",
         "prepublish": "not-in-publish || npm run prepublishOnly"
     },
-    "testling": {
-        "files": "test/*.js"
+    "dependencies": {
+        "punycode": "^1.4.1"
     },
     "devDependencies": {
         "@ljharb/eslint-config": "^21.1.1",
@@ -36,5 +36,8 @@
         "in-publish": "^2.0.1",
         "safe-publish-latest": "^2.0.0",
         "tape": "^5.8.1"
+    },
+    "testling": {
+        "files": "test/*.js"
     }
 }

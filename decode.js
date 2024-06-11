@@ -1,6 +1,6 @@
 'use strict';
 
-var punycode = require('punycode');
+var punycode = require('punycode/');
 var entities = require('./entities.json');
 
 module.exports = function decode(str) {

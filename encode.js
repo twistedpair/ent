@@ -1,6 +1,6 @@
 'use strict';
 
-var punycode = require('punycode');
+var punycode = require('punycode/');
 var revEntities = require('./reversed.json');
 
 module.exports = function encode(str, opts) {

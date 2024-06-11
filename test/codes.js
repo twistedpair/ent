@@ -1,7 +1,7 @@
 'use strict';
 
 var test = require('tape');
-var punycode = require('punycode');
+var punycode = require('punycode/');
 var ent = require('../');
 
 test('amp', function (t) {
