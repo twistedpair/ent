@@ -1,3 +1,5 @@
+'use strict';
+
 var test = require('tape');
 var punycode = require('punycode');
 var ent = require('../');
@@ -89,12 +91,12 @@ test('encode `special` option', function (t) {
     var a = '<>\'"&';
     var b = '&lt;&gt;\'"&amp;';
     t.equal(ent.encode(a, {
-      named: true,
-      special: {
-        '<': true,
-        '>': true,
-        '&': true
-      }
+        named: true,
+        special: {
+            '<': true,
+            '>': true,
+            '&': true
+        }
     }), b);
 
     t.end();
