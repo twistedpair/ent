@@ -15,12 +15,25 @@
     ],
     "license": "MIT",
     "scripts": {
-        "test": "tape 'test/*.js'"
+        "prepublishOnly": "safe-publish-latest",
+        "prepublish": "not-in-publish || npm run prepublishOnly",
+        "lint": "eslint --ext=js,mjs .",
+        "postlint": "evalmd readme.markdown",
+        "pretest": "npm run lint",
+        "tests-only": "tape 'test/**/*.js'",
+        "test": "npm run tests-only",
+        "posttest": "aud --production"
     },
     "testling": {
         "files": "test/*.js"
     },
     "devDependencies": {
+        "@ljharb/eslint-config": "^21.1.1",
+        "aud": "^2.0.4",
+        "eslint": "=8.8.0",
+        "evalmd": "^0.0.19",
+        "in-publish": "^2.0.1",
+        "safe-publish-latest": "^2.0.0",
         "tape": "^5.8.1"
     },
     "engines": {
