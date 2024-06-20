@@ -39,5 +39,8 @@
     },
     "testling": {
         "files": "test/*.js"
+    },
+    "engines": {
+        "node": ">= 0.4"
     }
 }
