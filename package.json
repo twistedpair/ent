@@ -24,7 +24,9 @@
         "tests-only": "tape 'test/**/*.js'",
         "test": "npm run tests-only",
         "posttest": "aud --production",
-        "build": "node build"
+        "build": "node build",
+        "version": "auto-changelog && git add CHANGELOG.md",
+        "postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\""
     },
     "dependencies": {
         "punycode": "^1.4.1"
@@ -32,6 +34,7 @@
     "devDependencies": {
         "@ljharb/eslint-config": "^21.1.1",
         "aud": "^2.0.4",
+        "auto-changelog": "^2.4.0",
         "eslint": "=8.8.0",
         "evalmd": "^0.0.19",
         "in-publish": "^2.0.1",
@@ -44,6 +47,14 @@
     },
     "engines": {
         "node": ">= 0.4"
+    },
+    "auto-changelog": {
+        "output": "CHANGELOG.md",
+        "template": "keepachangelog",
+        "unreleased": false,
+        "commitLimit": false,
+        "backfillLimit": false,
+        "hideCredit": true
     },
     "publishConfig": {
         "ignore": [
