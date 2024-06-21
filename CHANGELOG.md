@@ -80,7 +80,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - upgrade tape [`c7ebae7`](https://github.com/ljharb/ent/commit/c7ebae716d01170520c920938d88329ddd1c10f4)
 - opts [`884f737`](https://github.com/ljharb/ent/commit/884f737e9a92dd81c9f1db1316672da06823f40b)
 
-## [v0.1.0](https://github.com/ljharb/ent/compare/v0.0.7...v0.1.0) - 2013-07-29
+## [v0.1.0](https://github.com/ljharb/ent/compare/v0.0.8...v0.1.0) - 2013-07-29
 
 ### Fixed
 
@@ -91,6 +91,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Only include named entities with semicolons in reverse [`3d1ad32`](https://github.com/ljharb/ent/commit/3d1ad3270a3c11c9aa12cf1e4a9d2624c6c71b26)
 - Add test for a more obscure entity [see #8] [`e7dc91b`](https://github.com/ljharb/ent/commit/e7dc91b728d6de0af74ff10c1e12200c19249f6b)
 - Just call the method escape (apparently it's not utf8) [`91c3587`](https://github.com/ljharb/ent/commit/91c35879dd9b9db68f4e9bfa754fa947544e9924)
+
+## [v0.0.8](https://github.com/ljharb/ent/compare/v0.0.7...v0.0.8) - 2024-06-21
+
+### Commits
+
+- Only apps should have lockfiles [`47ef756`](https://github.com/ljharb/ent/commit/47ef75666d9ba7a6489aef7009ad669c31052a74)
+- [Dev Deps] add eslint, safe-publish-latest, evalmd [`57ae197`](https://github.com/ljharb/ent/commit/57ae197213eef40b8983f0edd69a9c92d13b305e)
+- [Tests] migrate from travis to GHA [`7ff7938`](https://github.com/ljharb/ent/commit/7ff79385290a1a1478fdc0f151b85cc0452dcdf2)
+- [meta] use `auto-changelog` [`9881b78`](https://github.com/ljharb/ent/commit/9881b781217b7ba031d2717bf4994391ac38e38a)
+- [Dev Deps] update `tape` [`89a220a`](https://github.com/ljharb/ent/commit/89a220aa63dbb9b6e349a78ebea401c00e288da9)
+- [meta] update URLs [`770d069`](https://github.com/ljharb/ent/commit/770d069cb8c2e35539359e7da4460f1293fb1136)
+- [Fix] use `punycode` package instead of the deprecated node core module [`68a5239`](https://github.com/ljharb/ent/commit/68a52399264bc8770e84bb54a6bb21dac49e1c5e)
+- [meta] use `npmignore` [`444eb43`](https://github.com/ljharb/ent/commit/444eb43cc23b455ebb42353dd85425c6e5413bf4)
+- [meta] add missing `engines.node` [`54881fb`](https://github.com/ljharb/ent/commit/54881fb5c5c93f81b24e97e4f9c53327e8ab9b2c)
 
 ## [v0.0.7](https://github.com/ljharb/ent/compare/v0.0.6...v0.0.7) - 2013-07-29
 
