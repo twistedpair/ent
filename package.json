@@ -19,7 +19,7 @@
         "prepublishOnly": "safe-publish-latest && npm run build",
         "prepublish": "not-in-publish || npm run prepublishOnly",
         "lint": "eslint --ext=js,mjs .",
-        "postlint": "evalmd readme.markdown",
+        "postlint": "evalmd README.md",
         "pretest": "npm run lint",
         "tests-only": "tape 'test/**/*.js'",
         "test": "npm run tests-only",
