@@ -5,6 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v0.0.8](https://github.com/ljharb/ent/compare/v0.0.7...v0.0.8) - 2024-06-21
+
+### Commits
+
+- Only apps should have lockfiles [`de1a73d`](https://github.com/ljharb/ent/commit/de1a73d8e8cd7c77605fb2f416bce91e794959dd)
+- [Dev Deps] add eslint, safe-publish-latest, evalmd [`d9500b7`](https://github.com/ljharb/ent/commit/d9500b7aaddb495fd501a6ae4138938c36f508a7)
+- [Tests] migrate from travis to GHA [`387b726`](https://github.com/ljharb/ent/commit/387b726a8bc321c67e0431cac5e8a4131fabad1f)
+- [meta] use `auto-changelog` [`2499d46`](https://github.com/ljharb/ent/commit/2499d46b7919468456886672ea89383bc72b7f59)
+- [Dev Deps] update `tape` [`5088957`](https://github.com/ljharb/ent/commit/508895792193f56851401c6cea8e5fc197d6de86)
+- [meta] update URLs [`ade1d9e`](https://github.com/ljharb/ent/commit/ade1d9e42e4d2bc9a8da143a702ae259679d544d)
+- [meta] use `npmignore` [`30d1882`](https://github.com/ljharb/ent/commit/30d188200595fd02a24e908270e0055ba1170b56)
+- [Fix] use `punycode` package instead of the deprecated node core module [`f52685f`](https://github.com/ljharb/ent/commit/f52685fd652f58b91f2c3898236a63a5a109b2b6)
+- [meta] add missing `engines.node` [`e721aaa`](https://github.com/ljharb/ent/commit/e721aaad5c4d0e33c68b3b5f1e1e7df6df065df1)
+
 ## [v0.0.7](https://github.com/ljharb/ent/compare/v0.0.6...v0.0.7) - 2013-07-29
 
 ### Fixed

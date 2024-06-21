@@ -1,7 +1,7 @@
 {
     "name": "ent",
     "description": "Encode and decode HTML entities",
-    "version": "0.0.7",
+    "version": "0.0.8",
     "repository": "https://github.com/ljharb/ent.git",
     "author": "James Halliday <mail@substack.net> (http://substack.net)",
     "main": "./index.js",
