@@ -1,7 +1,18 @@
 'use strict';
 
 var punycode = require('punycode/');
+var $decode = punycode.ucs2.decode;
+var $encode = punycode.ucs2.encode;
+
 var revEntities = require('./reversed.json');
+
+var defaultSpecial = {
+    '"': true,
+    "'": true,
+    '<': true,
+    '>': true,
+    '&': true
+};
 
 module.exports = function encode(str, opts) {
     if (typeof str !== 'string') {
@@ -13,17 +24,13 @@ module.exports = function encode(str, opts) {
     if (opts.named) { numeric = false; }
     if (opts.numeric !== undefined) { numeric = opts.numeric; }
 
-    var special = opts.special || {
-        '"': true, "'": true,
-        '<': true, '>': true,
-        '&': true
-    };
+    var special = opts.special || defaultSpecial;
 
-    var codePoints = punycode.ucs2.decode(str);
+    var codePoints = $decode(str);
     var chars = [];
     for (var i = 0; i < codePoints.length; i++) {
         var cc = codePoints[i];
-        var c = punycode.ucs2.encode([cc]);
+        var c = $encode([cc]);
         var e = revEntities[cc];
         if (e && (cc >= 127 || special[c]) && !numeric) {
             chars.push('&' + ((/;$/).test(e) ? e : e + ';'));
