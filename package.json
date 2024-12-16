@@ -5,6 +5,7 @@
     "repository": "https://github.com/ljharb/ent.git",
     "author": "James Halliday <mail@substack.net> (http://substack.net)",
     "main": "./index.js",
+    "sideEffects": false,
     "keywords": [
         "entities",
         "entitify",
